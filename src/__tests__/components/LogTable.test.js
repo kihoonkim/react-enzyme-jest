@@ -1,11 +1,12 @@
-import {shallow} from "enzyme";
-import LogTable from "../../components/LogTable";
-import useUserContext from "../../hooks/useUserContext";
-import ContentLoading from "../../components/loading/ContentLoading";
-import Table from "../../components/table/Table";
-import TableRow from "../../components/table/TableRow";
+import React from 'react';
+import { shallow } from 'enzyme';
+import LogTable from '../../components/LogTable';
+import useUserContext from '../../hooks/useUserContext';
+import ContentLoading from '../../components/loading/ContentLoading';
+import Table from '../../components/table/Table';
+import TableRow from '../../components/table/TableRow';
 
-jest.mock("../../hooks/useUserContext");
+jest.mock('../../hooks/useUserContext');
 
 describe('LogTable test', () => {
   const getUsersFromAPIMock = jest.fn();
@@ -25,11 +26,11 @@ describe('LogTable test', () => {
     useUserContext.mockReturnValue({ ...useUserContextReturnValue });
     shallow(<LogTable />);
 
-    expect(getUsersFromAPIMock).toHaveBeenCalled()
+    expect(getUsersFromAPIMock).toHaveBeenCalled();
   });
 
   test('show ContentLoading on loading', () => {
-    useUserContext.mockReturnValue({ ...useUserContextReturnValue })
+    useUserContext.mockReturnValue({ ...useUserContextReturnValue });
     const wrapper = shallow(<LogTable />);
 
     expect(wrapper.find(ContentLoading).exists()).toBeTruthy();

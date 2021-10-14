@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from 'react';
 
 function getUsersFromAPI() {}
 function deleteUserFromApi() {}
@@ -12,5 +12,5 @@ export default function useUserContext() {
     setUsers([]);
   }, []);
 
-  return {users, loading, getUsersFromAPI, deleteUserFromApi}
+  return { users, loading, getUsersFromAPI, deleteUserFromApi };
 }

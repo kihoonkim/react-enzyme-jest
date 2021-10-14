@@ -1,9 +1,7 @@
 import React from 'react';
 
 function ContentLoading() {
-  return (
-    <div></div>
-  );
+  return <div></div>;
 }
 
 export default ContentLoading;

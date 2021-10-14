@@ -1,4 +1,5 @@
-import LogTable from "./components/LogTable";
+import React from 'react';
+import LogTable from './components/LogTable';
 
 function App() {
   return (

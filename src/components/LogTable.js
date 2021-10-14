@@ -1,14 +1,14 @@
-import React, {useEffect} from 'react';
-import useUserContext from "../hooks/useUserContext";
-import ContentLoading from "./loading/ContentLoading";
-import Table from "./table/Table";
-import TableHead from "./table/TableHead";
-import TableRow from "./table/TableRow";
-import TableCell from "./table/TableCell";
-import TableBody from "./table/TableBody";
+import React, { useEffect } from 'react';
+import useUserContext from '../hooks/useUserContext';
+import ContentLoading from './loading/ContentLoading';
+import Table from './table/Table';
+import TableHead from './table/TableHead';
+import TableRow from './table/TableRow';
+import TableCell from './table/TableCell';
+import TableBody from './table/TableBody';
 
 function LogTable() {
-  const { loading, users, getUsersFromAPI, deleteUserFromApi } = useUserContext()
+  const { loading, users, getUsersFromAPI, deleteUserFromApi } = useUserContext();
 
   useEffect(() => {
     getUsersFromAPI();
@@ -33,10 +33,7 @@ function LogTable() {
                 <TableCell>{index + 1}</TableCell>
                 <TableCell>{user.name}</TableCell>
                 <TableCell>
-                  <button
-                    className="delete-btn"
-                    onClick={() => deleteUserFromApi(user.id)}
-                  >
+                  <button className="delete-btn" onClick={() => deleteUserFromApi(user.id)}>
                     Delete
                   </button>
                 </TableCell>
